@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": ".",
     "inlineSources": false,
     "module": "node16",
     "moduleResolution": "node16",

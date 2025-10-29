@@ -19,23 +19,23 @@
   "type": "module",
   "exports": {
     "node": {
-      "import": "./lib/index.js",
-      "module-sync": "./lib/index.js",
-      "require": "./lib/node.cjs",
-      "types": "./lib/index.d.ts"
+      "import": "./dist/index.js",
+      "module-sync": "./dist/index.js",
+      "require": "./dist/node.cjs",
+      "types": "./dist/index.d.ts"
     },
     "default": {
-      "import": "./lib/core.js",
-      "module-sync": "./lib/core.js",
-      "require": "./lib/default.cjs",
-      "types": "./lib/core.d.ts"
+      "import": "./dist/core.js",
+      "module-sync": "./dist/core.js",
+      "require": "./dist/default.cjs",
+      "types": "./dist/core.d.ts"
     }
   },
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/**/*.js",
-    "lib/**/*.d.ts",
-    "lib/*.cjs"
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/*.cjs"
   ],
   "keywords": [
     "music",
@@ -91,7 +91,6 @@
   ],
   "scripts": {
     "compile-src": "tsc -p lib --sourceMap false",
-    "compile-test": "tsc -p test",
     "compile": "bun run compile-src",
     "build": "bun run clean && bun compile",
     "prepublishOnly": "bun run build",
